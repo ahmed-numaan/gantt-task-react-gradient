@@ -19,6 +19,7 @@ export const TaskGantt: React.FC<TaskGanttProps> = ({
   ganttHeight,
   scrollY,
   scrollX,
+  children,
 }) => {
   const ganttSVGRef = useRef<SVGSVGElement>(null);
   const horizontalContainerRef = useRef<HTMLDivElement>(null);
@@ -67,6 +68,7 @@ export const TaskGantt: React.FC<TaskGanttProps> = ({
           fontFamily={barProps.fontFamily}
           ref={ganttSVGRef}
         >
+          {children}
           <Grid {...gridProps} />
           <TaskGanttContent {...newBarProps} />
         </svg>
