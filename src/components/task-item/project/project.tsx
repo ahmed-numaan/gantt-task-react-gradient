@@ -40,7 +40,7 @@ export const Project: React.FC<TaskItemProps> = ({ task, isSelected }) => {
         ry={task.barCornerRadius}
         className={styles.projectBackground}
       />
-      <rect
+      {/* <rect
         x={task.progressX}
         width={task.progressWidth}
         y={task.y}
@@ -68,7 +68,7 @@ export const Project: React.FC<TaskItemProps> = ({ task, isSelected }) => {
         className={styles.projectTop}
         points={projectRightTriangle}
         fill={barColor}
-      />
+      /> */}
     </g>
   );
 };
