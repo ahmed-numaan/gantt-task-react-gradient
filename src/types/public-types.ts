@@ -142,4 +142,5 @@ export interface StylingOption {
 
 export interface GanttProps extends EventOption, DisplayOption, StylingOption {
   tasks: Task[];
+  children: string | JSX.Element | JSX.Element[]
 }

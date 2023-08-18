@@ -25,6 +25,7 @@ import { removeHiddenTasks, sortTasks } from "../../helpers/other-helper";
 import styles from "./gantt.module.css";
 
 export const Gantt: React.FunctionComponent<GanttProps> = ({
+  children,
   tasks,
   headerHeight = 50,
   columnWidth = 60,
@@ -465,6 +466,7 @@ export const Gantt: React.FunctionComponent<GanttProps> = ({
           ganttHeight={ganttHeight}
           scrollY={scrollY}
           scrollX={scrollX}
+          children={children}
         />
         {ganttEvent.changedTask && (
           <Tooltip
