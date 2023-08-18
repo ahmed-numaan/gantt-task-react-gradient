@@ -11,6 +11,7 @@ export type TaskGanttProps = {
   ganttHeight: number;
   scrollY: number;
   scrollX: number;
+  children: string | JSX.Element | JSX.Element[];
 };
 export const TaskGantt: React.FC<TaskGanttProps> = ({
   gridProps,
@@ -31,6 +32,10 @@ export const TaskGantt: React.FC<TaskGanttProps> = ({
       horizontalContainerRef.current.scrollTop = scrollY;
     }
   }, [scrollY]);
+
+  useEffect(() => {
+    console.log("Hello...");
+  }, []);
 
   useEffect(() => {
     if (verticalGanttContainerRef.current) {
